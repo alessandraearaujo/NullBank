@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt" ang="pt" >
+<head>
+  <meta charset="UTF-8">
+  <title>NullBank - Cadastro de cliente</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+
+<body bgcolor="#6d1c78">
+
+<div class align="center">
+  <p id="my-image"><img src="./logo.jpeg">
+  </p>
+</div>
+
+
+<h1>Cadastro de cliente</h1></font>
+
+  <div style="text-align:center">
+    <form method="post" id="form_login">
+      <br>
+      <input type="text" placeholder="Titular da conta" name="nome"/>
+      <br>
+      <br>
+      <input type="text" placeholder="CPF" name="cpf"/>
+      <br>
+      <br>
+      <br>
+      <button type="submit">Cadastrar novo cliente</button>
+    </form>
+    <br>
+    </div>
+    <div th:each="cliente : ${cliente}">
+      <div>
+        <p><span th:text="${cliente.nome}"></span></p>
+        <p><span th:text="${cliente.cpf}"></span></p>
+      </div>
+
+
+
+  </div>
+
+</body>
+</html>

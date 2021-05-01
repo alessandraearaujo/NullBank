@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/PROJETO E IMPLEMENTAÇÃO ORIENTADO A OBJETOS.iml" filepath="$PROJECT_DIR$/.idea/PROJETO E IMPLEMENTAÇÃO ORIENTADO A OBJETOS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nullbank/nullbank.iml" filepath="$PROJECT_DIR$/nullbank/nullbank.iml" />
+    </modules>
+  </component>
+</project>
