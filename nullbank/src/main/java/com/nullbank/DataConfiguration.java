@@ -29,7 +29,7 @@ public class DataConfiguration {
         adapter.setGenerateDdl(true);
         adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
         adapter.setPrepareConnection(true);
-        adapter.getPersistenceProvider();
+//        adapter.getPersistenceProvider();
         adapter.setGenerateDdl(true);
 
         return adapter;

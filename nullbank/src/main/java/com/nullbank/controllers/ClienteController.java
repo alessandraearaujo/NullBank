@@ -30,13 +30,14 @@ public class ClienteController {
         return "redirect:/cadastrarCliente";
     }
 
+
     @RequestMapping(value="/listarClientes")
     // Requisição exibe clientes cadastrados na mesma view do formCliente
-    public ModelAndView listaClientes() {
-        ModelAndView mv = new ModelAndView("formCliente");
+    public ModelAndView listarClientes() {
+        ModelAndView mv = new ModelAndView("listaCliente");
         Iterable<Cliente> clientes = cli.findAll();
-        //reconhece a palavra "clientes" da view
-        mv.addObject("clientes", clientes);
+        // Reconhece a palavra "clientes" da view e instancia o objeto model view retornar cada um dos registros
+        mv.addObject("clientes",clientes);
         return mv;
     }
 }

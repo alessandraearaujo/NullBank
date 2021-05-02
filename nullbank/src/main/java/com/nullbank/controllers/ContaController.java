@@ -18,7 +18,7 @@ public class ContaController {
     @RequestMapping(value="/cadastrarConta", method=RequestMethod.GET)
     public String form() {
 
-        return "conta/formConta";
+        return "formConta";
     }
 
     // Requisição que envia dados, salvando-os no banco de dados utilizando o crud extends da interface

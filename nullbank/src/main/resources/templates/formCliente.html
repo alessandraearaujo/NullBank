@@ -1,25 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt" ang="pt" >
+<html xmlns:th="http://thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>NullBank - Cadastro de cliente</title>
+  <title>NullBank</title>
+
 </head>
 
-<link rel="stylesheet" type="text/css" href="estilo.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<style>
+  .center {
+    width:auto;
+    text-align:center;
+    padding:20px;
+  }
+  img {
+    max-width:80%;
+    height:auto;
+  }
 
+  table {
+    border-collapse: collapse;
+    width: 60%;
+  }
 
+  th, td {
+    padding: 2px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  a:link {
+    background: #B1B1B1;
+    color: black;
+    text-decoration: none;
+    font-weight: lighter;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #DFDFDF;
+    border-right-color: #666;
+    border-bottom-color: #333;
+    border-left-color: #858585;
+    padding: 10px;
+  }
+
+  a:hover {
+    background: #B1B1B1;
+    color: #333;
+    font-weight: lighter;
+    border-color: #B1B1B1;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-blink: white;
+  }
+
+  h6 {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-blink: white;
+    padding: inherit;
+  }
+  body {
+    background-color: #6d1c78  ;
+  }
+</style>
 <body bgcolor="#6d1c78">
 
 <div class align="center">
-  <p id="my-image"><img src="./logo.jpeg">
+  <p id="my-image"><img src="https://github.com/alessandraearaujo/nullbank/blob/master/nullbank/src/main/resources/templates/logo.jpeg?raw=true">
   </p>
 </div>
 
-
 <h1>Cadastro de cliente</h1></font>
-
+<div style="text-align:center"><br>
+  <a href="/">🏠 Página inicial</a>
+</div>
+<br>
   <div style="text-align:center">
     <form method="post" id="form_login">
       <br>
@@ -31,18 +97,9 @@
       <br>
       <br>
       <button type="submit">Cadastrar novo cliente</button>
+      <button type="reset">Limpar</button>
     </form>
     <br>
-    </div>
-    <div th:each="cliente : ${cliente}">
-      <div>
-        <p><span th:text="${cliente.nome}"></span></p>
-        <p><span th:text="${cliente.cpf}"></span></p>
-      </div>
-
-
-
   </div>
-
 </body>
 </html>
