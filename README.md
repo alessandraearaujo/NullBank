@@ -6,11 +6,6 @@ Este projeto foi desenvolvido para a disciplina de Projeto e Implementação Ori
 
 *   Cadastro de conta (empresa, trabalhador ou universitária), com associação de um cliente titular de conta.
 
-O projeto completo está disponível no repositório do GitHub:
-
-[https://github.com/alessandraearaujo/nullbank](https://github.com/alessandraearaujo/nullbank)
-
-* * *
 
 ## Modelo do domínio
 
@@ -20,14 +15,14 @@ Para atender às exigências do trabalho, foi elaborado o modelo abaixo que busc
 
 *   Herança de 3 níveis: satisfeita através das classes `Conta Corrente,` `Conta Trabalhador` , `Conta Universitária` e `Conta Empresa`.
 
-* * *
+
 ## Tecnologias implementadas
 
 Para a construção dos sistema, foi utilizado para o back-end o framework Spring Boot devido à sua praticidade no processo de configuração e publicação de aplicação. Já no front-end, foi utilizado o framework Materialize.
 
 O banco de dados utilizado foi o MYSQL e para a persistência de dados, foi utilizado o framework hibernate na classe `DataConfiguration`.
 
-* * *
+
 
 ## Arquitetura do software
 
@@ -41,7 +36,6 @@ Para atender à exigência de padrão arquiteturaral MVC, as classes foram const
 
 A exigência de CRUD foi atendida através da implementação das interfaces de CRUD Resository.
 
-* * *
 
 ## Telas
 
