@@ -38,7 +38,6 @@ public class ClienteController {
         // Reconhece a palavra "clientes" da view e instancia o objeto model view retornar cada um dos registros
         mv.addObject("clientes",clientes);
         return mv;
-
     }
 
     // Requisição recebe um código de cliente, retorna o registro e o exclui

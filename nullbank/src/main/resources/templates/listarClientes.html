@@ -20,45 +20,44 @@
         }
 
     </style>
-<body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
-
+<body>
 <div class="container">
     <img src="https://raw.githubusercontent.com/alessandraearaujo/nullbank/master/nullbank/src/main/resources/templates/logo.jpeg" alt="logo">
 
-<h3>Gerenciamento de clientes</h3>
-<a href="/" class="waves-effect waves-light btn"><i class="material-icons left">home</i>Página inicial</a>
-<a href="/cadastrarCliente" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar cliente</a>
+    <h3>Gerenciamento de clientes</h3>
+    <a href="/" class="waves-effect waves-light btn"><i class="material-icons left">home</i>Página inicial</a>
+    <a href="/cadastrarCliente" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar cliente</a>
 
-<table>
-    <thead>
-    <tr>
-        <th>Código do cliente</th>
-        <th>Cliente</th>
-        <th>CPF</th>
-        <th colspan="2" >Ações</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="cliente: ${clientes}">
-        <td><span th:text="${cliente.codCliente}"></span></td>
-        <td><span th:text="${cliente.nome}"></span></td>
-        <td><span th:text="${cliente.cpf}"></span></td>
-        <td>
-            <!--            <a class="waves-effect waves-light btn.small"-->
-            <!--               th:href="${(#mvc.url('CLI#deletarCliente').arg(0, cliente.codCliente)).build()}">-->
-            <i class="material-icons center">edit</i></a></td>
-        <td>
-            <!--            <a class="waves-effect waves-light btn.small"-->
-            <!--               th:href="${(#mvc.url('CLI#deletarCliente').arg(0, cliente.codCliente)).build()}">-->
-            <i class="material-icons center">delete</i></a></td>
-    </tr>
-    </tbody>
-</table>
+    <table>
+        <thead>
+        <tr>
+            <th>Código do cliente</th>
+            <th>Cliente</th>
+            <th>CPF</th>
+            <th colspan="2" >Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="cliente: ${clientes}">
+            <td><span th:text="${cliente.codCliente}"></span></td>
+            <td><span th:text="${cliente.nome}"></span></td>
+            <td><span th:text="${cliente.cpf}"></span></td>
+            <td>
+                <a class="waves-effect waves-light btn.small"
+                   th:href="${(#mvc.url('CLI#editarCliente').arg(0, cliente.codCliente)).build()}">
+                    <i class="material-icons center">edit</i></a></td>
+            <td>
+                <a class="waves-effect waves-light btn.small"
+                   th:href="${(#mvc.url('CLI#deletarCliente').arg(0, cliente.codCliente)).build()}">
+                    <i class="material-icons center">delete</i></a></td>
+        </tr>
+        </tbody>
+    </table>
 
-<br>
-
+    <br>
+</div>
 </body>
 </html>
