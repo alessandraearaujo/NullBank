@@ -1,32 +1,39 @@
 package com.nullbank.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.Objects;
+import org.springframework.lang.NonNull;
+
+import java.io.Serializable;
+import javax.persistence.*;
 
 @Entity
-public class Cliente {
+public class Cliente implements Serializable{
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int codCliente;
-    private String nome;
-    private String cpf;
 
+    @NonNull
+    private String nome;
+
+    @NonNull
+    private String cpf;
     public Cliente(int codCliente, String nome, String cpf) {
         this.codCliente = codCliente;
         this.nome = nome;
         this.cpf = cpf;
     }
 
+    public void setCodCliente(int codCliente) {
+        this.codCliente = codCliente;
+    }
+
     public Cliente() {
 
     }
 
-    public int getCodCliente() {
-        return codCliente;
+    public int getCodCliente() {return codCliente;
     }
 
     public String getNome() {
@@ -44,4 +51,6 @@ public class Cliente {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+
 }

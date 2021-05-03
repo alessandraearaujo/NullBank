@@ -1,11 +1,13 @@
 package com.nullbank.controllers;
 
+import com.nullbank.models.Cliente;
 import com.nullbank.models.Conta;
 import com.nullbank.repository.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ContaController {
@@ -29,5 +31,16 @@ public class ContaController {
         con.save(conta);
 
         return "redirect:/cadastrarConta";
+    }
+
+    // Requisição exibe clientes cadastrados na view listarContas
+    @RequestMapping(value="/listarContas")
+    public ModelAndView listarContas() {
+        ModelAndView mv = new ModelAndView("listarContas");
+        Iterable<Conta> conta = con.findAll();
+        // Reconhece a palavra "Contas" da view e instancia o objeto model view retornar cada um dos registros
+        mv.addObject("contas",conta);
+        return mv;
+
     }
 }
