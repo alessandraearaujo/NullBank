@@ -25,7 +25,7 @@
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <body>
 <div class="container">
-    <img src="https://raw.githubusercontent.com/alessandraearaujo/nullbank/master/nullbank/src/main/resources/templates/logo.jpeg" alt="logo">
+    <img src="https://github.com/alessandraearaujo/nullbank/blob/master/nullbank/src/main/resources/static/logo.jpeg?raw=true" alt="logo">
 
     <h3>Gerenciamento de clientes</h3>
     <a href="/" class="waves-effect waves-light btn"><i class="material-icons left">home</i>Página inicial</a>
@@ -46,12 +46,12 @@
             <td><span th:text="${cliente.nome}"></span></td>
             <td><span th:text="${cliente.cpf}"></span></td>
             <td>
-                <a class="waves-effect waves-light btn.small"
-                   th:href="${(#mvc.url('CLI#editarCliente').arg(0, cliente.codCliente)).build()}">
+<!--                <a class="waves-effect waves-light btn.small"-->
+<!--                   th:href="${(#mvc.url('CLI#editarCliente').arg(0, cliente.codCliente)).build()}">-->
                     <i class="material-icons center">edit</i></a></td>
             <td>
-                <a class="waves-effect waves-light btn.small"
-                   th:href="${(#mvc.url('CLI#deletarCliente').arg(0, cliente.codCliente)).build()}">
+<!--                <a class="waves-effect waves-light btn.small"-->
+<!--                   th:href="${(#mvc.url('CLI#deletarCliente').arg(0, cliente.codCliente)).build()}">-->
                     <i class="material-icons center">delete</i></a></td>
         </tr>
         </tbody>

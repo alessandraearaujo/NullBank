@@ -2,6 +2,7 @@ package com.nullbank.controllers;
 
 import com.nullbank.models.Cliente;
 import com.nullbank.models.Conta;
+import com.nullbank.repository.ClienteRepository;
 import com.nullbank.repository.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,10 @@ public class ContaController {
     @Autowired
     private ContaRepository con;
 
+    @Autowired
+    private ClienteRepository cli;
+
+
     // Requisição que retorna o formulário
     @RequestMapping(value="/cadastrarConta", method=RequestMethod.GET)
     public String form() {
@@ -23,13 +28,16 @@ public class ContaController {
         return "formConta";
     }
 
+    @RequestMapping(value = "/cadastrarContaEmpresa", method = RequestMethod.GET)
+    public String formEmpresa() {
+        return "formContaEmpresa";
+    }
+
     // Requisição que envia dados, salvando-os no banco de dados utilizando o crud extends da interface
     @RequestMapping(value="/cadastrarConta", method=RequestMethod.POST)
     public String form(Conta conta) {
-        System.out.println(conta.toString());
-        // Salva a conta no banco de dados
+        conta.setTitular(new Cliente());
         con.save(conta);
-
         return "redirect:/cadastrarConta";
     }
 
@@ -41,6 +49,18 @@ public class ContaController {
         // Reconhece a palavra "Contas" da view e instancia o objeto model view retornar cada um dos registros
         mv.addObject("contas",conta);
         return mv;
+    }
+
+    // Requisição exibe clientes cadastrados na view listarContas
+    @RequestMapping(value="/listarContasEmpresa")
+    public ModelAndView listarContasPJ() {
+        ModelAndView mv = new ModelAndView("listarContasEmpresa");
+        Iterable<Conta> conta = con.findAll();
+        // Reconhece a palavra "Contas" da view e instancia o objeto model view retornar cada um dos registros
+        mv.addObject("contas",conta);
+        return mv;
 
     }
+
+
 }

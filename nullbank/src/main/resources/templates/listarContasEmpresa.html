@@ -29,7 +29,7 @@
 
 <h3>Lista de contas cadastradas</h3>
 <a href="/" class="waves-effect waves-light btn"><i class="material-icons left">home</i>Página inicial</a>
-<a href="/cadastrarConta" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar conta</a>
+<a href="/cadastrarContaEmpresa" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar conta</a>
 
 <table>
     <thead>
@@ -37,6 +37,7 @@
         <th>Código da conta</th>
         <th>Número da conta</th>
         <th>Titular</th>
+        <th>CNPJ</th>
         <th>Senha</th>
         <th>Saldo</th>
     </tr>
@@ -47,6 +48,7 @@
         <td><span th:text="${conta.codConta}"></span></td>
         <td><span th:text="${conta.numeroConta}"></span></td>
         <td><span th:text="${conta.getTitular().getNome()}"></span></td>
+        <td><span th:text="${conta.cnpj}"></span></td>
         <td><span th:text="${conta.senha}"></span></td>
         <td><span th:text="${conta.saldo}"></span></td>
     </tr>

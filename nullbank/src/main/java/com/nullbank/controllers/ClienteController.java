@@ -41,11 +41,21 @@ public class ClienteController {
     }
 
     // Requisição recebe um código de cliente, retorna o registro e o exclui
-    @RequestMapping("/deletarCliente")
+    @RequestMapping(value = "/deletarCliente", method=RequestMethod.DELETE)
     public String deletarCliente(int codCliente){
         Cliente cliente = cli.findClienteByCodCliente(codCliente);
         cli.delete(cliente);
         return "redirect:/listarClientes";
+    }
+
+    // Requisição recebe um código de cliente, retorna o formCliente para edição
+    @RequestMapping(value = "/editarCliente")
+    public String editarCliente(int codCliente){
+        Cliente cliente = cli.findClienteByCodCliente(codCliente);
+        cliente.setCodCliente(("codCliente"),cliente.getCodCliente());
+        cliente.setNome(("nome"),cliente.getNome());
+        cliente.setNome(("cpf"),cliente.getCpf());
+        return "redirect:/formCliente";
     }
 
 }

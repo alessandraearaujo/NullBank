@@ -8,6 +8,7 @@ public class Conta implements Serializable {
 
     // Atributos da classe mãe Conta
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int codConta;
@@ -37,12 +38,12 @@ public class Conta implements Serializable {
         return senha;
     }
 
-    public Cliente getTitular() {
-        return titular;
-    }
-
     public void setTitular(Cliente titular) {
         this.titular = titular;
+    }
+
+    public Cliente getTitular() {
+        return this.titular;
     }
 
     public void setSenha(int senha) {

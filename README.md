@@ -11,7 +11,7 @@ Este projeto foi desenvolvido para a disciplina de Projeto e Implementação Ori
 
 Para atender às exigências do trabalho, foi elaborado o modelo abaixo que busca atender de forma simplificada às exigências:
 
-*   Associação entre classes: satisfeita através das classes `cliente` e `Conta Corrente`,em que uma conta-corrente deve possuir uma pessoa;
+*   Associação entre classes: satisfeita através das classes `Cliente` e `Conta Corrente`,em que uma conta-corrente deve possuir uma pessoa;
 
 *   Herança de 3 níveis: satisfeita através das classes `Conta Corrente,` `Conta Trabalhador` , `Conta Universitária` e `Conta Empresa`.
 
@@ -35,16 +35,4 @@ Para atender à exigência de padrão arquitetural MVC, as classes foram constru
 *   Templates: Contém as views, onde o usuário pode interagir com o sistema e onde os controllers coletam e enviam dados.
 
 A exigência de CRUD foi atendida através da implementação das ‘interfaces’ de CRUD Repository.
-
-
-## Telas
-
-
-### Cadastro de cliente
-
-
-### Consulta de cliente
-
-
-### Cadastro de conta
 

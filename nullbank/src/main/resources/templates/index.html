@@ -21,7 +21,7 @@
 
 </style>
 <div class="container">
-    <img src="https://github.com/alessandraearaujo/nullbank/blob/master/nullbank/src/main/resources/templates/logo.jpeg?raw=true"
+    <img src="https://github.com/alessandraearaujo/nullbank/blob/master/nullbank/src/main/resources/static/logo.jpeg?raw=true"
          alt="logo"></p>
 
     <h3>Sistema de cadastro</h3>
@@ -41,15 +41,19 @@
     <br>
     <table>
         <tr>
-            <th colspan="3"><h5>Contas</h5></th>
+            <th colspan="2"><h5>Contas</h5></th>
         <tr>
         <tr>
             <td><a href="/cadastrarConta" class="waves-effect waves-light btn"><i class="material-icons left">attach_money</i>Cadastrar
-                conta - Pessoa Física</a></td>
-            <td><a href="/cadastrarContaEmpresa" class="waves-effect waves-light btn"><i class="material-icons left">attach_money</i>Cadastrar
-            conta - Empresa</a></td>
+                conta PF</a></td>
             <td><a href="/listarContas" class="waves-effect waves-light btn"><i class="material-icons left">list</i>Visualizar
-                contas cadastradas</a></td>
+                contas PF cadastradas</a></td>
+        </tr>
+        <tr>
+            <td><a href="/cadastrarContaEmpresa" class="waves-effect waves-light btn"><i class="material-icons left">attach_money</i>Cadastrar
+                conta PJ</a></td>
+            <td><a href="/listarContasEmpresa" class="waves-effect waves-light btn"><i class="material-icons left">list</i>Visualizar
+                contas PJ cadastradas</a></td>
         </tr>
     </table>
 

@@ -24,25 +24,18 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('select');
-        var instances = M.FormSelect.init(elems, options);
-    });
-
-    // Or with jQuery
-
+<script type="text/javascript">
     $(document).ready(function(){
         $('select').formSelect();
     });
 </script>
 <div class="container">
 
-    <img src="https://raw.githubusercontent.com/alessandraearaujo/nullbank/master/nullbank/src/main/resources/templates/logo.jpeg"
+    <img src="https://github.com/alessandraearaujo/nullbank/blob/master/nullbank/src/main/resources/static/logo.jpeg?raw=true"
          alt="logo"><br>
-    <h3>Cadastro de conta</h3>
+    <h3>Cadastro de conta - PF</h3>
     <a href="/" class="waves-effect waves-light btn"><i class="material-icons left">home</i>Página inicial</a>
-    <a href="/listarContas" class="waves-effect waves-light btn"><i class="material-icons left">list</i>Lista de contas cadastrados</a>
+    <a href="/listarContas" class="waves-effect waves-light btn"><i class="material-icons left">list</i>Lista de contas cadastradas</a>
 </div>
 
 <form class="container" method="post">
@@ -53,17 +46,15 @@
     <input type="text" placeholder="Senha" name="senha"/></label>
     <label> Valor depositado na abertura:
     <input type="text" placeholder="Saldo inicial" name="saldo"/></label>
+<!--    IMPLEMENTAR COMPONENTE CERTO DEPOIS-->
         <label> Titular:
-        <div class="input-field col s12">
+        <div class="input-field col s12" >
             <select>
-        <option value="" disabled selected>Seleciona o titular da conta</option>
-
-<!--Implementar o select dinâmico-->
-                <option value="1">Maria Teodora</option>
-
+                <option value="" disabled selected>Seleciona o titular da conta</option>
+                <option value="1" name="titular">Maria Teodora</option>
             </select>
         </div>
-    </label>
+         </label>
 
 <br>
     <button class="waves-effect waves-light btn" type="submit">Confirmar</button>

@@ -40,7 +40,7 @@ public class Cliente implements Serializable{
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String s, String nome) {
         this.nome = nome;
     }
 
@@ -53,4 +53,6 @@ public class Cliente implements Serializable{
     }
 
 
+    public void setCodCliente(String codCliente, int codCliente1) {
+    }
 }
